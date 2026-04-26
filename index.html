@@ -446,10 +446,31 @@
     background: var(--charcoal);
     color: rgba(255,255,255,0.5);
     text-align: center;
-    padding: 36px 24px;
+    padding: 56px 24px 48px;
     font-size: 0.85rem;
   }
   footer strong { color: rgba(255,255,255,0.8); }
+  .footer-cta {
+    display: inline-block;
+    margin-top: 28px;
+    background: linear-gradient(135deg, var(--rose), var(--lavender));
+    color: white;
+    text-decoration: none;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 18px 48px;
+    border-radius: 100px;
+    box-shadow: 0 8px 28px rgba(196,139,127,0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .footer-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(196,139,127,0.45);
+    color: white;
+  }
+  .footer-cta:active { transform: translateY(0); }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 600px) {
@@ -496,13 +517,8 @@
   </div>
 </section>
 
-<!-- ── CARDS GRID ── -->
-<div class="section-wrap">
-  <div class="section-header">
-    <h2>全部 8 張療癒小卡</h2>
-    <p>點擊「展開練習」查看每張卡片的 10 個具體練習方法</p>
-    <div class="divider"></div>
-  </div>
+<!-- ── CARDS GRID (hidden) ── -->
+<div style="display:none">
   <div class="cards-grid" id="cardsGrid">
 
     <!-- 01 -->
@@ -1243,15 +1259,15 @@
       </div>
     </div>
 
-  </div><!-- /cards-grid -->
-</div><!-- /section-wrap -->
+  </div>
+</div>
 
 <!-- ── FOOTER ── -->
 <footer>
   <strong>#newbrain 能量練習卡片盒</strong> ·
   打開卡片盒，讓自己停下來，被自己好好抱一抱。
-  <br><br>
-  <a href="https://www.skool.com/1000-9284/about?ref=6a0a8380e8d842a0a4d466e3e43ed096" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.7); text-decoration: underline; text-underline-offset: 3px; font-size: 0.9rem; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">
+  <br>
+  <a class="footer-cta" href="https://www.skool.com/1000-9284/about?ref=6a0a8380e8d842a0a4d466e3e43ed096" target="_blank" rel="noopener noreferrer">
     大女主顯化致富俱樂部 →
   </a>
 </footer>
